@@ -1,6 +1,10 @@
 @import "./bootstrap_reboot";
 @import './mixins';
 
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
+
 @include font-face(SFMono, "../fonts/SFMono/SFMono-Medium", null, null, ttf woff woff2);
 //Variables
 $font-main: 'Inter', sans-serif;
@@ -19,5 +23,5 @@ body {
 
 	background-color: $color-main;
 	color: $color-light;
-	// font-family: SFMono;
+	font-family: SFMono;
 }
