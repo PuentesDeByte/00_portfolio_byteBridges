@@ -1,0 +1,23 @@
+@import "./bootstrap_reboot";
+@import './mixins';
+
+@include font-face(SFMono, "../fonts/SFMono/SFMono-Medium", null, null, ttf woff woff2);
+//Variables
+$font-main: 'Inter', sans-serif;
+$font-outstanding: 'Oswald', sans-serif;
+
+$color-main: #0f172a;
+$color-secondary: #4F96CC;
+$color-light: #e2e8f0;
+// $color-secundario: #1e90ff;
+
+// $color-variacion: #141313;
+
+
+body {
+	margin: 0;
+
+	background-color: $color-main;
+	color: $color-light;
+	// font-family: SFMono;
+}
