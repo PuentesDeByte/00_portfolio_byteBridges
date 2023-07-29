@@ -1,17 +1,21 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-import Header from '../components/Header'
 import './App.css'
+import { Layout } from '../containers/Layout'
+import Home from '../pages/Home'
 
 function App() {
 
   return (
-    <>
-      <h1 className='test'>Con los nuevos textos</h1>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route index element={<Home />} />
+        </Route>
 
-      <div className='menu'>
-        <Header />
-      </div>
-    </>
+        <Route path='*' element={<h1> nada</h1>} />
+      </Routes>
+    </Router>
   )
 }
 
