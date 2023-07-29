@@ -1,0 +1,41 @@
+@import "./globales";
+
+@include font-face(SFMono, "../fonts/SFMono/SFMono-Medium", null, null, ttf woff woff2);
+
+.gl-font-sans {
+  font-family: SFMono;
+}
+
+a{
+  text-decoration: none;
+  text-decoration-line: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: $color-secondary;
+
+}
+
+.hero-intro--higher{
+  font-size: clamp(40px, 8vw, 80px);
+  line-height: 0.9;
+}
+
+.gl-txt-highlight {
+  color: $color-secondary;
+}
+
+.gl-txt-main-font {
+  font-family: SFMono;
+}
+
+.layout {
+  background-color: $color-main;
+}
+
+// cards
+.card-categorie {
+  background-color: rgba($color-secondary, $alpha: 0.2);
+}
