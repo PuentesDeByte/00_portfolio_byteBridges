@@ -23,6 +23,8 @@ a:hover {
   line-height: 0.9;
 }
 
+
+//generales
 .gl-txt-highlight {
   color: $color-secondary;
 }
@@ -31,11 +33,66 @@ a:hover {
   font-family: SFMono;
 }
 
+.gl-txt-section {
+  font-size: clamp(20px,4vw,24px)
+}
+
+.gl-txt-section-number {
+  font-size: clamp(15px,3vw,20px);
+}
+
 .layout {
   background-color: $color-main;
 }
 
-// cards
+// cards categories
 .card-categorie {
-  background-color: rgba($color-secondary, $alpha: 0.2);
+  background-color: rgba($color-secondary, $alpha: 0.15);
+}
+
+//svgs
+
+.media-icons {
+  fill: rgba($color: $color-light, $alpha: 0.6);
+}
+
+.media-icons:hover{
+  fill: $color-light;
+}
+
+
+.nav-hamLogo{
+  cursor: pointer;
+  
+  rect {
+    transition: all .3s ease-in-out;
+  }
+  
+  &:hover{
+    .middle {
+      x: 0;
+      opacity: 0;
+    }
+    .top {
+      transform: rotate(45deg);
+      transform-origin: center top;
+      x: 50px;
+      y: 35px;
+    }
+    .bottom {
+      transform: rotate(-45deg);
+      transform-origin: center top;
+      x: -20px;
+      y: 25px;
+			width: 60px;
+    }
+  }
+
+}
+
+.nav-logoN{
+  transition-duration: 500ms;
+}
+.nav-logoN:hover {
+  transform: translate(-5px, -5px);
 }

@@ -1,4 +1,5 @@
 import Media from "../components/Media"
+import SectionsTitle from "../components/SectionsTitle"
 
 
 const Hero = () => {

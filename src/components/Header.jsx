@@ -1,5 +1,6 @@
 import Ham from '../assets/icons/Ham'
-import logo from '../assets/logo.svg'
+import logoBG from '../assets/logo-bg.svg'
+import IconLogoN from '../assets/icons/logoN'
 
 const Header = () => {
   const categories = ['about', 'skills', 'projects']
@@ -16,8 +17,9 @@ const Header = () => {
   return (
     <header className='gl-font-sans w-[inherit] h-24 fixed z-10 top-0'>
       <nav className="header-container flex justify-between items-center w-full h-full">
-        <div className="header-logo h-auto">
-          <img src={logo} className='h-16 w-auto' alt="logo" />
+        <div className="header-logo h-16 w-auto relative">
+          <IconLogoN />
+          <img src={logoBG} className='h-16 w-auto absolute top-0 -z-10' alt="logo" />
         </div>
 
         <div className="header-info">

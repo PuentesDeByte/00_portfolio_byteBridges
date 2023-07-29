@@ -6,10 +6,10 @@ const IconLinkedin = () => (
     width="100%"
     height="100%"
     fillRule="nonzero"
-
+    className="media-icons"
   >
     <g
-      fill="#ffffff"
+      // fill="#ffffff"
       fillRule="nonzero"
       stroke="none"
       strokeWidth="1"
