@@ -5,12 +5,12 @@ const Media = () => {
 
   return (
     <ul className="media-list w-full h-full flex justify-between m-0">
-      <li className="w-auto h-full pr-10">
+      <li className="w-auto h-full pr-5">
         <a href="/#">
           <IconLinkedin />
         </a>
       </li>
-      <li className="w-auto h-full pr-10">
+      <li className="w-auto h-full pl-5">
         <a href="https://github.com/NicoleVenachi" target="_blank" rel="noreferrer">
           <IconGitHub />
         </a>

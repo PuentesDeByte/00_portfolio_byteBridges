@@ -14,7 +14,7 @@ const Hero = () => {
       <div className="hero-info text-xl text-slate-500 max-w-[540px] mb-4 md:mb-10">
         I’m an electronic engineer passionate about software development. Focused on building intuitive and accessible <span className="gl-txt-highlight"> web applications </span>. In my free time, I enjoy learning new technologies and developing <span className="gl-txt-highlight"> machine-learning </span> solutions for diverse situations I face in my daily life.
       </div>
-      <div className="hero-footer h-10">
+      <div className="hero-footer h-10 relative">
         <Media />
       </div>
     </section>
