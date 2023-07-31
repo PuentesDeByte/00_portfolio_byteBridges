@@ -27,7 +27,7 @@ const Footer = () => {
         <h2 className='text-sm text-center leading-4 text-slate-600 m-0'>
           Insprired by <a className='text-slate-400' onMouseEnter={handleOnLinkClick} onMouseLeave={handleOnLinkClick} href="https://brittanychiang.com/" target="_blank" rel="noreferrer">
             Brittany Chiang
-            <ArrowTopRightOnSquareIcon className={`ml-1 h-3 w-auto inline transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-110  ${idleTransition ? '' : childIconTransition}`} />
+            <ArrowTopRightOnSquareIcon className={`ml-1 h-3 w-auto inline transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110  ${idleTransition ? '' : childIconTransition}`} />
           </a>
         </h2>
       </div>
