@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Media from './Media'
 
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid'

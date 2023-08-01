@@ -1,84 +1,80 @@
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
-import CardCategorie from "../components/CardCategorie";
-import SectionsTitle from "../components/SectionsTitle";
-import { projectsWeb, technologies } from "../data"
-import { sortJSONByCategorieAndString } from "../utils";
 import { useState } from "react";
+import ProjectCard from "../components/ProjectCard";
+import SectionsTitle from "../components/SectionsTitle";
+import { projectsWeb } from "../data"
+import { Link } from "react-router-dom";
+
+import { FolderPlusIcon } from "@heroicons/react/24/solid";
+import { FolderOpenIcon } from "@heroicons/react/24/solid";
+
 
 // import as from '../assets/projects/web/01_web.png'
 const Projects = () => {
 
+  const [projectsCategories, setProjectsCategories] = useState([{ categorie: 'web', active: true }, { categorie: 'ml', active: false }])
+
+  const starredProjectsWeb = projectsWeb.filter(project => project?.starred == true)
+
+  const handleCategoriesSelector = (e) => {
+    const clickedLi = e.target.id.split(`/`)[1]
+    setProjectsCategories(prev => (
+      prev.map((categorieObj, id) => {
+        categorieObj.active = id == clickedLi ? true : false
+        return categorieObj
+      }) // al estao anterior, pongo en active al que di click
+
+    ))
+  }
+
+  //projects archive transition
   const [idleTransition, setIdleTransition] = useState(true)
-  const childIconTransition = '-translate-y-1 scale-110'
+  const childIconTransition = '-translate-y-1 scale-110 opacity-0'
 
 
   const handleOnLinkClick = () => {
     setIdleTransition(prev => !prev)
   }
 
-  let project = projectsWeb[2]
-  console.log(project.important);
-  const projectSkills = technologies.filter(technologie => project.technologies.includes(technologie.name))
-  const projectSkillsSorted = sortJSONByCategorieAndString(projectSkills, 'priority', 'name')
-
   return (
     <section id="projects" className="projects w-full h-fit mb-24">
       <SectionsTitle number={'3'} text={'Projects'} />
 
-      <div className="projects-content flex justify-between w-full">
+      <div className="projects-content flex justify-between w-full flex-col md:flex-row">
 
-        <div className="project-cards rounded-lg h-full w-[50vw] max-w-3xl p-4 flex gap-4 hover:bg-slate-400/5 hover:border-t-[1px] hover:border-r-[1px] border-slate-300/20
-        transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.01]"
-          onMouseEnter={handleOnLinkClick}
-          onMouseLeave={handleOnLinkClick}
-          onClick={() => window.open(`${project.link}`)}
-        >
+        <div className="projects-selector h-fit">
+          <ul className="gl-txt-main-font h-fit">
+            {
+              projectsCategories.map((categorieObj, id) => (
+                <li
+                  className={`py-2 px-7 text-slate-400 tracking-widest border-l-2 ${projectsCategories[id].active ? 'border-[#4F96CC] bg-[#4F96CC]/10' : 'border-white/20'} transition duration-300 prueba`}
+                  key={id}
+                  id={`li-selector/${id}`}
+                  onClick={handleCategoriesSelector}
+                >{categorieObj.categorie.toUpperCase()}</li>
+              ))
+            }
+          </ul>
+        </div>
+        <div className="projects-cards-container flex flex-col gap-y-4 md:w-[70vw] lg:w-[55vw] max-w-3xl">
+          {
+            starredProjectsWeb.map((project, id) => (
+              <ProjectCard key={id} project={project} />
+            ))
 
-          <figure className="card-image w-1/3 h-fit flex justify-center m-0 rounded-md border-2 border-white/20 ">
-            <img className="imgs-ratio object-cover rounded-md " src={`${project.image}`} alt="project image" />
-          </figure>
+          }
 
-          <div className="flex flex-col h-full w-full">
-
-            <h2 className={`card-title text-xl ${idleTransition ? '' : 'gl-txt-highlight'}`}>
-
-              {project.name[0].toUpperCase() + project.name.substring(1)} <span>
-                <ArrowTopRightOnSquareIcon className={`ml-1 h-3 w-auto inline transition duration-300 ease-in-out transform ${idleTransition ? '' : childIconTransition}`} />
+          <Link to={'a'} className="hover:text-[#e2e8f0]" >
+            <p
+              className={`text-base gl-txt-main-font`}
+              onMouseEnter={handleOnLinkClick}
+              onMouseLeave={handleOnLinkClick}
+            >
+              <span className={`${idleTransition ? 'no-underline' : 'underline'} decoration-[#4F96CC] underline-offset-4`}>View Projects Archive</span> <span className={`relative ${idleTransition ? '' : 'text-[#4F96CC]'} `}>
+                <FolderPlusIcon className={`ml-1 h-5 w-auto inline transition duration-500 ease-in-out transform ${idleTransition ? '' : childIconTransition}`} />
+                <FolderOpenIcon className={`ml-1 h-5 w-auto inline absolute top-0 left-0 transition duration-[0.8s] ease-in-out transform ${idleTransition ? childIconTransition : ''}`} />
               </span>
-            </h2>
-
-            <p className="card-detils text-base text-slate-500 leading-5 mb-2">{project.details[0].toUpperCase() + project.details.substring(1)}</p>
-
-            {project.important.length > 1 && (
-              <div className="card-important text-base text-slate-500 leading-5 h-fit">
-                <p className="mb-1 gl-tex text-slate-400"> ⚠️ Important: ⚠️ </p>
-                <ul className="list-disc pl-4 mb-2">
-                  {
-                    project.important.map((importantLiItem, id) => (
-                      <li key={id}>
-                        {importantLiItem[0].toUpperCase() + importantLiItem.substring(1)}
-                      </li>
-                    ))
-                  }
-                </ul>
-              </div>
-
-            )}
-
-
-            <div className="card-technologies flex  w-full flex-wrap gap-x-2 gap-y-3 max-w-[840px] mb-0 gl-txt-main-font">
-              {
-                projectSkillsSorted.map((skill, id) => (
-                  <CardCategorie
-                    key={id}
-                    skill={skill}
-                    isFullList={false}
-                  />
-                ))
-              }
-
-            </div>
-          </div>
+            </p>
+          </Link>
         </div>
 
 

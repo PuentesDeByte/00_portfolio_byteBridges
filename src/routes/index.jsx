@@ -13,7 +13,7 @@ function App() {
           <Route index element={<Home />} />
         </Route>
 
-        <Route path='*' element={<h1> nada</h1>} />
+        <Route path='*' element={<h1> Not Found </h1>} />
       </Routes>
     </Router>
   )
