@@ -42,11 +42,12 @@ const Projects = () => {
       <div className="projects-content flex justify-between w-full flex-col md:flex-row">
 
         <div className="projects-selector h-fit">
-          <ul className="gl-txt-main-font h-fit">
+          <ul className="gl-txt-main-font h-fit flex flex-row md:flex-col">
             {
               projectsCategories.map((categorieObj, id) => (
                 <li
-                  className={`py-2 px-7 text-slate-400 tracking-widest border-l-2 ${projectsCategories[id].active ? 'border-[#4F96CC] bg-[#4F96CC]/10' : 'border-white/20'} transition duration-300 prueba`}
+                  className={` border-b-2 md:border-l-2 md:border-b-0
+                  py-2 px-7 w-fit text-slate-400 tracking-widest  ${projectsCategories[id].active ? 'border-[#4F96CC] bg-[#4F96CC]/10' : 'border-white/20'} transition duration-300 prueba`}
                   key={id}
                   id={`li-selector/${id}`}
                   onClick={handleCategoriesSelector}
