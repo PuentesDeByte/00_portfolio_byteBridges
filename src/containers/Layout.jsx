@@ -28,7 +28,7 @@ function Layout() {
   return (
 
     <div className='layout flex justify-center' ref={mouseRef}>
-      <div className='layout-container w-[90vw] lg:w-[80vw] md:w-[85vw]'>
+      <div className='layout-container w-[90vw] lg:w-[80vw] md:w-[85vw] max-w-6xl'>
         <Header />
         <main>
           <Outlet />

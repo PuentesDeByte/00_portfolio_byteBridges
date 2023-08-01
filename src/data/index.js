@@ -96,7 +96,9 @@ export const projectsWeb = [
     important: "",
     technologies: ["hTML", "cSS" , "javaScript", "react", "redux", "ant"],
     date: new Date("2023-06-02T00:00:00.000-06:00"),
-    link: "https://crypto-verse-app-nl.netlify.app/"
+    link: "https://crypto-verse-app-nl.netlify.app/",
+    starred: true,
+    image: 'images/projects/01_web.png'
   },
   {
     categorie: "web",
@@ -105,7 +107,9 @@ export const projectsWeb = [
     important: "",
     technologies: ["hTML", "cSS" , "javaScript", "react", "mui"],
     date: new Date("2023-05-02T00:00:00.000-06:00"),
-    link: "https://travel-advitsor-app.netlify.app/"
+    link: "https://travel-advitsor-app.netlify.app/",
+    starred: true,
+    image: 'images/projects/02_web.png'
   },
 
   {
@@ -115,7 +119,9 @@ export const projectsWeb = [
     important: "designed for SMALL screens only (e.g., iPhone S6). To login, u just need a valid e-mail address (u don't need any password): u can login as a driver using the email, 'driver@gmail.com'; u can login as a driver using the email, 'tester1@gmail.com'. The Backend is hosted on a free server, so it may need some time to fetch the data. U can try to press the login button a few times to 'awake' the server",
     technologies: ["hTML", "cSS" , "javaScript", "react", "mongoDB","node", "expresss", "sass"],
     date: new Date("2023-04-02T00:00:00.000-06:00"),
-    link: "https://rapidapi.com/ludwing/api/amazon-data-scraper133"
+    link: "https://rapidapi.com/ludwing/api/amazon-data-scraper133",
+    starred: true,
+    image: 'images/projects/03_web.png'
   },
   
   {
@@ -186,7 +192,9 @@ export const projectsWeb = [
     important: "the Backend is hosted on a free server, so it may need some time to fetch the data. U can try by refreshing the page a few times to 'awake' the server",
     technologies: ["hTML", "cSS", "javaScript", "node", "firebase", "express"],
     date: new Date("2022-05-03T00:00:00.000-06:00"),
-    link: "https://github.com/NicoleVenachi/Instrumentaci-n-Fend"
+    link: "https://nicolevenachi.github.io/Instrumentaci-n-Fend/index.html",
+    starred: true,
+    image: 'images/projects/03_web.png'
   },
 
   {
