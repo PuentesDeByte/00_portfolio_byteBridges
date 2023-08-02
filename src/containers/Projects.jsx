@@ -64,7 +64,7 @@ const Projects = () => {
 
           }
 
-          <Link to={'a'} className="hover:text-[#e2e8f0]" >
+          <Link to={'projects'} className="hover:text-[#e2e8f0]" >
             <p
               className={`text-base gl-txt-main-font`}
               onMouseEnter={handleOnLinkClick}

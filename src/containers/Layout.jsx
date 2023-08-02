@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Outlet } from 'react-router-dom'
 
-import Header from '../components/Header'
 import Footer from "../components/Footer";
 
 function Layout() {
@@ -29,7 +28,7 @@ function Layout() {
 
     <div className='layout flex justify-center' ref={mouseRef}>
       <div className='layout-container w-[90vw] lg:w-[80vw] md:w-[85vw] max-w-6xl'>
-        <Header />
+
         <main>
           <Outlet />
         </main>
