@@ -14,7 +14,7 @@ const Header = () => {
   const links = () => (
     categories.map((categorie, id) => (
       <a key={id} className='text-xl text-center md:text-sm px-5' href={`#${categorie}`}
-        onClick={() => setIsCheckoutSideMenuOpen(prev => !prev)}
+        onClick={() => { screenSize < 768 && setIsCheckoutSideMenuOpen(prev => !prev) }}
       >
         <span className='gl-txt-highlight'> 0{id + 1}. </span> {categorie[0].toUpperCase() + categorie.substring(1)}
       </a>
