@@ -65,31 +65,50 @@ a:hover {
   cursor: pointer;
   
   rect {
-    transition: all .3s ease-in-out;
+    transition: all .4s ease-in-out;
   }
   
-  &:hover{
-    .middle {
-      x: 0;
-      opacity: 0;
-    }
-    .top {
-      transform: rotate(45deg);
-      transform-origin: center top;
-      x: 50px;
-      y: 35px;
-    }
-    .bottom {
-      transform: rotate(-45deg);
-      transform-origin: center top;
-      x: -20px;
-      y: 25px;
-			width: 60px;
-    }
-  }
+  // &:hover{
+  //   .middle {
+  //     x: 0;
+  //     opacity: 0;
+  //   }
+  //   .top {
+  //     transform: rotate(45deg);
+  //     transform-origin: center top;
+  //     x: 50px;
+  //     y: 35px;
+  //   }
+  //   .bottom {
+  //     transform: rotate(-45deg);
+  //     transform-origin: center top;
+  //     x: -20px;
+  //     y: 25px;
+	// 		width: 60px;
+  //   }
+  // }
 
 }
 
+.nav-hamLogoClicked{
+  .middle {
+    x: 0;
+    opacity: 0;
+  }
+  .top {
+    transform: rotate(45deg);
+    transform-origin: center top;
+    x: 50px;
+    y: 35px;
+  }
+  .bottom {
+    transform: rotate(-45deg);
+    transform-origin: center top;
+    x: -20px;
+    y: 25px;
+    width: 60px;
+  }
+}
 .nav-logoN{
   transition-duration: 500ms;
 }
