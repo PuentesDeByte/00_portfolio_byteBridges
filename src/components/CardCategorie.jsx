@@ -1,7 +1,7 @@
 
-const CardCategorie = ({ skill, isFullList }) => {
+const CardCategorie = ({ skill, isFullList, isProjectsTable }) => {
   const fullListStyles = 'text-sm sm:text-base px-4 py-2'
-  const smallListStyles = 'text-xs sm:text-sm px-4 py-1'
+  const smallListStyles = `text-xs px-4 py-1 ${isProjectsTable ? '' : 'sm:text-[0.84rem]'}`
   return (
     <span
       className={`card-categorie gl-txt-highlight h-fit border-transparent rounded-3xl ${isFullList ? fullListStyles : smallListStyles}`}

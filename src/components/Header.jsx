@@ -15,7 +15,7 @@ const Header = () => {
   )
 
   return (
-    <header className='gl-font-sans w-[inherit] h-24 fixed z-10 top-0'>
+    <header className='gl-font-sans w-[inherit] h-24 z-10 top-0 sticky bg-slate-900/75 backdrop-blur '>
       <nav className="header-container flex justify-between items-center w-full h-full">
         <div className="header-logo h-16 w-auto relative">
           <IconLogoN />
