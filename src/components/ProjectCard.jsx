@@ -7,7 +7,7 @@ import { useState } from "react";
 const ProjectCard = ({ project }) => {
 
   const [idleTransition, setIdleTransition] = useState(true)
-  const childIconTransition = '-translate-y-1 scale-110'
+  const childIconTransition = '-translate-y-2 scale-110'
 
 
   const handleOnLinkClick = () => {

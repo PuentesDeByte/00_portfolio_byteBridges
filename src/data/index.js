@@ -19,7 +19,7 @@ export const technologies = [
   {
     name: 'express',
     level: 'basics',
-    priority:2, //denerian ser 1
+    priority:2, //denerian ser 1, los pongo uno peus de momento son basics
   },
   {
     name: 'sQL',

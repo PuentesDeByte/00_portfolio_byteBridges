@@ -11,30 +11,18 @@ const ProjectsTable = ({ projectsData }) => {
   const projectTechnologiesSorted = (projectTechnologies) => {
     //saco technologies en el formato necesario y soteto
     const projectSkills = technologies.filter(technologie => projectTechnologies.technologies.includes(technologie.name))
-    console.log(projectSkills);
     return sortJSONByCategorieAndString(projectSkills, 'priority', 'name')
   }
-
-  let a = projectTechnologiesSorted({
-    categorie: "web",
-    name: "bootsrap Course",
-    details: "a dummy static web page builded into a Bootstrap course",
-    important: [""],
-    technologies: ["hTML", "cSS"],
-    date: new Date("2019-09-02T00:00:00.000-06:00"),
-    link: "https://nicolevenachi.github.io/curso_bootstrap_4/"
-  })
-  console.log(a);
 
   return (
     <table className="w-full">
       <thead>
-        <tr>
+        <tr className="border-b-[1px] border-slate-300/10">
           {
             Object.entries(projectsColsLarge).map((projectsCol, id) => (
-              <th key={id}> {
+              <th key={id} className="py-4 pr-8"> {
                 projectsCol[1] == 'important' ?
-                  `⚠️ ${projectsCol[1][0].toUpperCase() + projectsCol[1].substring(1)} ⚠️` :
+                  `⚠️${projectsCol[1][0].toUpperCase() + projectsCol[1].substring(1)}⚠️` :
                   projectsCol[1][0].toUpperCase() + projectsCol[1].substring(1)
 
               } </th>
@@ -45,34 +33,28 @@ const ProjectsTable = ({ projectsData }) => {
       <tbody>
         {
           projectsData.map((project, id) => (
-            <tr key={id}>
-              <td>{project.date.getFullYear()}</td>
-              <td>{project.name[0].toUpperCase() + project.name.substring(1)}</td>
-              <td>{project.details[0].toUpperCase() + project.details.substring(1)}</td>
+            <tr key={id} className="border-b-[1px] border-slate-300/10">
+              <td className="py-4 pr-4 align-top">{project.date.getFullYear()}</td>
+              <td className="py-4 pr-4 align-top">{project.name[0].toUpperCase() + project.name.substring(1)}</td>
+              <td className="py-4 pr-4 align-top">{project.details[0].toUpperCase() + project.details.substring(1)}</td>
 
-              <td>
+              <td className="py-4 pr-4 align-top">
                 <div className="card-technologies flex  w-full flex-wrap gap-x-2 gap-y-3 max-w-[840px] mb-0 gl-txt-main-font">
                   {
 
-                  }
-                  {
-                    // console.log(projectTechnologiesSorted(project))
-                  }
-                  {
-
-                    // projectTechnologiesSorted(project).map((skill, id) => (
-                    //   <CardCategorie
-                    //     key={id}
-                    //     skill={skill}
-                    //     isFullList={false}
-                    //   />
-                    // ))
+                    projectTechnologiesSorted(project).map((skill, id) => (
+                      <CardCategorie
+                        key={id}
+                        skill={skill}
+                        isFullList={false}
+                      />
+                    ))
                   }
 
                 </div>
               </td>
 
-              <td>
+              <td className="py-4 pr-4 align-top">
                 {(project.important[0] !== '') && (
                   <div className="card-important text-base text-slate-500 leading-5 h-fit">
                     <ul className="list-disc pl-4 mb-2">

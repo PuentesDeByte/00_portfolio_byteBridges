@@ -7,6 +7,7 @@ const CardCategorie = ({ skill, isFullList }) => {
       className={`card-categorie gl-txt-highlight h-fit border-transparent rounded-3xl ${isFullList ? fullListStyles : smallListStyles}`}
     >
       {skill.name[0].toUpperCase() + skill.name.substring(1)}
+      {(isFullList && skill?.level) && (` ${skill.level}`)}
     </span>
   )
 }
