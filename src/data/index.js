@@ -167,7 +167,7 @@ export const projectsWeb = [
 
   {
     categorie: "web",
-    name: "1st gen pokemons APP",
+    name: "1st gen pokemons App",
     details: "a pokemon web app showing 1st gen Pokemons basic info. Builded to test my Redux Toolkit knowledge",
     important: ["designed for large screens only"],
     technologies: ["hTML", "cSS" , "javaScript", "redux", "react", "antd"],
@@ -259,7 +259,7 @@ export const projectsWeb = [
 
   {
     categorie: "web",
-    name: "aESS webpage",
+    name: "aESS web page",
     details: "aESS -Aerospace and Electronic Systems Society- Popayán web page v.1  ",
     important: [""],
     technologies: ["hTML", "cSS" , "javaScript"],
