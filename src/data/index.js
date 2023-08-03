@@ -71,11 +71,11 @@ export const technologies = [
   },
   {
     name: 'hTML',
-    priority:4,
+    priority:3,
   },
   {
     name: 'cSS',
-    priority:4,
+    priority:3,
   },
   {
     name: 'sass',
@@ -346,6 +346,8 @@ export const projectsMl = [
     technologies: ["machine-learning", "python", "classification", "regression"],
     date: new Date("2023-05-02T00:00:00.000-06:00"),
     link: "https://drive.google.com/drive/folders/1fT56TOCLxakq9uhjbboi7cY4iVaEmwn9?usp=sharing",
+    starred: true,
+    image: 'images/projects/01_ml.png'
   },
   {
     categorie: "ml",
@@ -355,6 +357,8 @@ export const projectsMl = [
     technologies: ["machine-learning", "python", "classification", "deep learning"],
     date: new Date("2023-04-02T00:00:00.000-06:00"),
     link: "https://drive.google.com/drive/folders/1iYBxX9yezhcOeWA67vLJdxSL5UCfSEwi?usp=sharing",
+    starred: true,
+    image: 'images/projects/02_ml.png'
   },
 
   {
@@ -405,7 +409,7 @@ export const projectsMl = [
   },
   {
     categorie: "ml",
-    name: "medicine consumptionn",
+    name: "medicine consumption",
     details: "an ML multinomial classification system to predict patients drug consumption. The prediction relies on Decission Tree algorithm",
     important: [""],
     technologies: ["machine-learning", "python", "classification"],
@@ -450,6 +454,8 @@ export const projectsMl = [
     technologies: ["machine-learning", "python", "clustering"],
     date: new Date("2022-07-02T00:00:00.000-06:00"),
     link: "https://colab.research.google.com/drive/1-MuFMp81r1nn2gt2tECb3H0KwtyIAes8?usp=sharing",
+    starred: true,
+    image: 'images/projects/03_ml.png'
   },
   {
     categorie: "ml",
@@ -487,6 +493,8 @@ export const projectsMl = [
     technologies: ["machine-learning", "python", "regression"],
     date: new Date("2022-05-02T00:00:00.000-06:00"),
     link: "https://colab.research.google.com/drive/1ZSEVRZpqMikfFcYFEN-bgDGxXBwOnFf_",
+    starred: true,
+    image: 'images/projects/04_ml.png'
   },
 
   {

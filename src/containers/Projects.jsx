@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ProjectCard from "../components/ProjectCard";
 import SectionsTitle from "../components/SectionsTitle";
-import { projectsWeb } from "../data"
+import { projectsMl, projectsWeb } from "../data"
 import { Link } from "react-router-dom";
 
 import { FolderPlusIcon } from "@heroicons/react/24/solid";
@@ -12,20 +12,40 @@ import ProjectSelector from "./ProjectSelector";
 // import as from '../assets/projects/web/01_web.png'
 const Projects = () => {
 
+  //estado para el selector
   const [projectsCategories, setProjectsCategories] = useState([{ categorie: 'web', active: true }, { categorie: 'ml', active: false }])
 
-  const starredProjectsWeb = projectsWeb.filter(project => project?.starred == true)
+  // const starredProjectsWeb = projectsWeb.filter(project => project?.starred == true)
 
-  const handleCategoriesSelector = (e) => {
-    const clickedLi = e.target.id.split(`/`)[1]
-    setProjectsCategories(prev => (
-      prev.map((categorieObj, id) => {
-        categorieObj.active = id == clickedLi ? true : false
-        return categorieObj
-      }) // al estao anterior, pongo en active al que di click
 
-    ))
-  }
+  //data total 
+  const projectsData = projectsWeb.concat(projectsMl)
+
+  //estados para cambiar data
+  const [projects, setProjects] = useState(projectsWeb)
+
+  const [starredProjectsWeb, setStarredProjectsWeb] = useState(projects)
+
+
+  useEffect(() => {
+    const categorieFiltered = projectsCategories.find(projectsCategorie => projectsCategorie.active)
+    setProjects(
+      projectsData.filter(project => project.categorie == categorieFiltered.categorie)
+    )
+  }, [projectsCategories])
+
+  useEffect(() => {
+
+    //un estado/efecto adicional, para optimizar rendeering.
+    //fatal ria optinizar que no re rendice, si
+    setStarredProjectsWeb(projects.filter(project => project?.starred == true))
+
+  }, [projects])
+
+
+
+
+
 
   //projects archive transition
   const [idleTransition, setIdleTransition] = useState(true)
@@ -58,7 +78,9 @@ const Projects = () => {
           </ul>
         </div> */}
 
-        <ProjectSelector projectsCategories={projectsCategories} handleCategoriesSelector={handleCategoriesSelector} />
+        <ProjectSelector projectsCategories={projectsCategories}
+          setProjectsCategories={setProjectsCategories}
+        />
 
         <div className="projects-cards-container flex flex-col gap-y-4 md:w-[70vw] lg:w-[55vw] max-w-3xl">
           {
@@ -75,8 +97,8 @@ const Projects = () => {
               onMouseLeave={handleOnLinkClick}
             >
               <span className={`${idleTransition ? 'no-underline' : 'underline'} decoration-[#4F96CC] underline-offset-4`}>View Projects Archive...</span> <span className={`relative ${idleTransition ? '' : 'text-[#4F96CC]'} `}>
-                <FolderPlusIcon className={`ml-1 h-5 w-auto inline transition duration-500 ease-in-out transform ${idleTransition ? '' : childIconTransition}`} />
-                <FolderOpenIcon className={`ml-1 h-5 w-auto inline absolute top-0 left-0 transition duration-[0.8s] ease-in-out transform ${idleTransition ? childIconTransition : ''}`} />
+                <FolderPlusIcon className={`ml-1 h-5 w-auto inline transition duration-200 ease-in-out transform ${idleTransition ? '' : childIconTransition}`} />
+                <FolderOpenIcon className={`ml-1 h-5 w-auto inline absolute top-0 left-0 transition duration-500 ease-in-out transform ${idleTransition ? childIconTransition : ''}`} />
               </span>
             </p>
           </Link>
