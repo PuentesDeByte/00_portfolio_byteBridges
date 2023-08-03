@@ -9,17 +9,8 @@ const ProjectsTable = ({ projectsData }) => {
   const projectsColsHideOnMd = ['details']
   const projectsColsHideOnXsm = ['important']
 
-
-  // console.log(Object.keys(projectsData[0]));
-
-  // const projectTechnologiesSorted = (projectTechnologies) => {
-  //   //saco technologies en el formato necesario y soteto
-  //   const projectSkills = technologies.filter(technologie => projectTechnologies.technologies.includes(technologie.name))
-  //   return sortJSONByCategorieAndString(projectSkills, 'priority', 'name')
-  // }
-
   return (
-    <table className="w-full mt-12">
+    <table className="w-full mt-2">
       <thead className="sticky top-0 z-10 bg-slate-900/75 backdrop-blur">
         <tr className="border-b-[1px] border-slate-300/10">
           {

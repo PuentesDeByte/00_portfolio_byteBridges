@@ -71,11 +71,11 @@ export const technologies = [
   },
   {
     name: 'hTML',
-    priority:2,
+    priority:4,
   },
   {
     name: 'cSS',
-    priority:2,
+    priority:4,
   },
   {
     name: 'sass',
@@ -338,9 +338,6 @@ export const projectsWeb = [
 
 export const projectsMl = [
 
-  
-
-  
   {
     categorie: "ml",
     name: "perovskite microstructure prediction",
