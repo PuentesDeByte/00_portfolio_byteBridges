@@ -8,14 +8,7 @@ export const technologies = [
     name: 'redux',
     priority:1,
   },
-  {
-    name: 'scikit-learn',
-    priority:1,
-  },
-  {
-    name: 'machine-learning',
-    priority:1,
-  },
+
   {
     name: 'express',
     level: 'basics',
@@ -24,65 +17,85 @@ export const technologies = [
   {
     name: 'sQL',
     level: 'basics',
-    priority:2, //denerian ser 1
+    priority:3, //denerian ser 1
   },
   {
     name: 'mongoDB',
     level: 'basics',
-    priority:2, //denerian ser 1
+    priority:3, //denerian ser 1
   },
   {
     name: 'firebase',
     level: 'basics',
-    priority:2, //denerian ser 1
+    priority:3, //denerian ser 1
+  },
+  {
+    name: 'scikit-learn',
+    priority:4, //debertia ser
+  },
+  {
+    name: 'machine-learning',
+    priority:4, //debertia ser
   },
   {
     name: 'node',
-    priority:1,
+    priority:2, //debertia ser
   },
   {
     name: 'javaScript',
-    priority:2,
+    priority:1,
   },
   {
     name: 'typeScript',
-    priority:2,
+    priority:1,
   },
   {
     name: 'python',
-    priority:2,
+    priority:4,
+  },
+  {
+    name: 'regression',
+    priority:4,
+  },
+  {
+    name: 'classification',
+    priority:4,
+  },
+  {
+    name: 'clustering',
+    priority:4,
   },
   {
     name: 'hTML',
-    priority:3,
+    priority:2,
   },
   {
     name: 'cSS',
-    priority:3,
+    priority:2,
   },
   {
     name: 'sass',
-    priority:3,
+    priority:2,
   },
   {
     name: 'stylus',
-    priority:3,
+    priority:2,
   },
   {
     name: 'less',
-    priority:3,
+    priority:2,
   },
   {
     name: 'antd',
-    priority:4,
+    priority:3, //deberian ser 4
   },
   {
     name: 'tailwind',
-    priority:4,
+    priority:3,
   },
   {
     name: 'mui',
-    priority:4,
+    priority:3,
   },
   
 ]
@@ -319,3 +332,159 @@ export const projectsWeb = [
   
 ]
 
+export const projectsMl = [
+
+
+  {
+    categorie: "ml",
+    name: "breast cancer prediction",
+    details: "an ML binomial classification system to classify breast cancer scans as benign or malignant. The prediction relies on the Stochastic Gradient Descent (SGD) classifier algorithm",
+    important: [""],
+    technologies: ["machine-learning", "python", "classification"],
+    date: new Date("2023-01-02T00:00:00.000-06:00"),
+    link: "https://colab.research.google.com/drive/10MAfnGkozwddQBYe_ixtEhHqaczXZMqd?usp=sharing",
+  },
+  {
+    categorie: "ml",
+    name: "cancer Cell Samples classifictaion",
+    details: "an ML binomial classification system to classify cells to determine whether the samples are benign or malignant using human cell records. The prediction relies on the Support Vector Machine algorithm",
+    important: [""],
+    technologies: ["machine-learning", "python", "classification"],
+    date: new Date("2023-01-02T00:00:00.000-06:00"),
+    link: "https://colab.research.google.com/drive/16BQ84izYCJs7e1cFrigo9nFgpXKLCPaP?usp=sharing",
+  },
+  {
+    categorie: "ml",
+    name: "telecom company customer churn",
+    details: "an ML multinomial classification system to predict which customers will or will not churn the company. The prediction relies on Logistic Regressio algorithm",
+    important: [""],
+    technologies: ["machine-learning", "python", "classification"],
+    date: new Date("2023-01-02T00:00:00.000-06:00"),
+    link: "https://colab.research.google.com/drive/1knWsYQcHKjghJreosNqyy538G2XlmlFW?usp=sharing",
+  },
+  {
+    categorie: "ml",
+    name: "medicine consumptionn",
+    details: "an ML multinomial classification system to predict patients drug consumption. The prediction relies on Decission Tree algorithm",
+    important: [""],
+    technologies: ["machine-learning", "python", "classification"],
+    date: new Date("2023-01-02T00:00:00.000-06:00"),
+    link: "https://colab.research.google.com/drive/14WUoKn8Du9aEeri5rugbT8qDHr0Stg2O?usp=sharing",
+  },
+  {
+    categorie: "ml",
+    name: "fruits Classification",
+    details: "an ML multinomial classification system to predict/label fruits using physical features. The prediction relies on KNN algorithm",
+    important: [""],
+    technologies: ["machine-learning", "python", "classification"],
+    date: new Date("2023-01-02T00:00:00.000-06:00"),
+    link: "https://colab.research.google.com/drive/10CZvdzpnfYkZ90xN8gyaS5eo0eSj289Z?usp=sharing",
+  },
+
+  {
+    categorie: "ml",
+    name: "colombia housing price",
+    details: "an ML regression system to predict housing price on Colombia",
+    important: [""],
+    technologies: ["machine-learning", "python", "regression"],
+    date: new Date("2023-01-02T00:00:00.000-06:00"),
+    link: "https://colab.research.google.com/drive/1Px3r__OT3jgOLO2un9MO1s2kTgni8wOe?usp=sharing",
+  },
+  {
+    categorie: "ml",
+    name: "cO2 cars emissions prediction",
+    details: "an ML regression system to predict cars CO2 emissions regarding engine and car brand features",
+    important: [""],
+    technologies: ["machine-learning", "python", "regression"],
+    date: new Date("2023-01-02T00:00:00.000-06:00"),
+    link: "https://colab.research.google.com/drive/1zEe_hjtH0D5fUHUH27JGsdILkT9aJ75N?usp=sharing",
+  },
+
+
+  {
+    categorie: "ml",
+    name: "countries Clustering",
+    details: "an ML clustering system to categorize the countries using the overall development of the country (i.e., some socio-economic and health factors). As this project uses a large data set, it also implements PCA to reduce its dimensionality",
+    important: [""],
+    technologies: ["machine-learning", "python", "clustering"],
+    date: new Date("2022-07-02T00:00:00.000-06:00"),
+    link: "https://colab.research.google.com/drive/1-MuFMp81r1nn2gt2tECb3H0KwtyIAes8?usp=sharing",
+  },
+  {
+    categorie: "ml",
+    name: "clustering dummy data - DBSCAN",
+    details: "an ML clustering system to group dummy test data. This project was developed to test DBSCAN essentials, the model evaluation, and its performance improvement (hyperparameters tunning)",
+    important: [""],
+    technologies: ["machine-learning", "python", "clustering"],
+    date: new Date("2022-06-04T00:00:00.000-06:00"),
+    link: "https://colab.research.google.com/drive/1D8t2QFr0i028FFd8geKdNddQf6yteKjl?usp=sharing",
+  },
+  {
+    categorie: "ml",
+    name: "clustering dummy data - hierarchical clustering",
+    details: "an ML clustering system to group dummy test data. This project was developed to test hierarchical clustering essentials, the model evaluation, and its performance improvement (hyperparameters tunning)",
+    important: [""],
+    technologies: ["machine-learning", "python", "clustering"],
+    date: new Date("2022-06-03T00:00:00.000-06:00"),
+    link: "https://colab.research.google.com/drive/1yPt8Eg-Mm8YuQFJFj_a1wo5PWA75JbCH?usp=sharing",
+  },
+  {
+    categorie: "ml",
+    name: "clustering dummy data - K-means",
+    details: "an ML clustering system to group dummy test data. This project was developed to test K-means essentials, the model evaluation, and its performance improvement (hyperparameters tunning)",
+    important: [""],
+    technologies: ["machine-learning", "python", "clustering"],
+    date: new Date("2022-06-02T00:00:00.000-06:00"),
+    link: "https://colab.research.google.com/drive/1OwGdiJC_hAaVxn9xGjYdH3KHGEt2-cgG?usp=sharing",
+  },
+
+  {
+    categorie: "ml",
+    name: "medical Insurance Payout",
+    details: "an ML regression system to predict the annual medical expenditure for USA customers regarding demographic information and health habits",
+    important: [""],
+    technologies: ["machine-learning", "python", "regression"],
+    date: new Date("2022-05-02T00:00:00.000-06:00"),
+    link: "https://colab.research.google.com/drive/1ZSEVRZpqMikfFcYFEN-bgDGxXBwOnFf_",
+  },
+
+  {
+    categorie: "ml",
+    name: "boston housing prices",
+    details: "an ML regression system to predict housing price on boston",
+    important: [""],
+    technologies: ["machine-learning", "python", "regression"],
+    date: new Date("2022-04-02T00:00:00.000-06:00"),
+    link: "https://colab.research.google.com/drive/1CdbyeMWncpo1pwolLzGOxczVZDjbe2qt",
+  },
+
+  {
+    categorie: "ml",
+    name: "dry beans classification",
+    details: "an ML multinomial classification system to classify dry beans varieties from its morphological features",
+    important: [""],
+    technologies: ["machine-learning", "python", "classification"],
+    date: new Date("2022-03-02T00:00:00.000-06:00"),
+    link: "https://colab.research.google.com/drive/12RX-OXb41UOdhFNqfNv2vdBmwbjTZ3Za?usp=sharing",
+  },
+  {
+    categorie: "ml",
+    name: "telecom company customer churn",
+    details: "an ML multinomial classification system to predict which customers will or will not churn the company",
+    important: [""],
+    technologies: ["machine-learning", "python", "classification"],
+    date: new Date("2022-02-02T00:00:00.000-06:00"),
+    link: "https://colab.research.google.com/drive/11pI_RN3bZ0Y4Pr2AySA-IznGhyMyZss7?usp=sharing",
+  },
+  {
+    categorie: "ml",
+    name: "hand-written digits classification",
+    details: "an ML binomial classification system to perform optical recognition of handwritten digits (from 0-9)",
+    important: [""],
+    technologies: ["machine-learning", "python", "classification"],
+    date: new Date("2022-01-02T00:00:00.000-06:00"),
+    link: "https://colab.research.google.com/drive/1Swa8l8oquOIGQ-bAxKsJv4noCmltF9iO?usp=sharing",
+    
+  },
+
+]
