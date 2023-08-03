@@ -11,7 +11,7 @@ export const technologies = [
 
   {
     name: 'express',
-    level: 'basics',
+    // level: 'basics',
     priority:2, //denerian ser 1, los pongo uno peus de momento son basics
   },
   {
@@ -21,7 +21,7 @@ export const technologies = [
   },
   {
     name: 'mongoDB',
-    level: 'basics',
+    // level: 'basics',
     priority:3, //denerian ser 1
   },
   {
@@ -59,6 +59,10 @@ export const technologies = [
   },
   {
     name: 'classification',
+    priority:4,
+  },
+  {
+    name: 'deep learning',
     priority:4,
   },
   {
@@ -334,14 +338,54 @@ export const projectsWeb = [
 
 export const projectsMl = [
 
+  
+
+  
+  {
+    categorie: "ml",
+    name: "perovskite microstructure prediction",
+    details: "this research project aims to quickly and efficiently predict perovskite microstructure according to easily measurable macroscopic and microscopic physical parameters. I've applied different ML algorithms in microstructure prediction, looking for two optimal models: a regression model to predict the size of the lattice parameter; and a classification model to predict the type of crystal structure formed. A paper that compiles the research results is being written",
+    important: ["the project was developed following the CRISP-ML methodology", "the entire project is split into different files, each implementing a different part of the methodology or, failing that, a different part of the ML modeling and data processing"],
+    technologies: ["machine-learning", "python", "classification", "regression"],
+    date: new Date("2023-05-02T00:00:00.000-06:00"),
+    link: "https://drive.google.com/drive/folders/1fT56TOCLxakq9uhjbboi7cY4iVaEmwn9?usp=sharing",
+  },
+  {
+    categorie: "ml",
+    name: "stellar classification",
+    details: "this research project aims to classify stars based on their spectral characteristics and physical parameters. It uses different configurations for Logistic Regression, Random Forest, and Neural Networks algorithms looking for an optimal classification model",
+    important: ["the entire project is split into different files, each implementing a different part of the ML modeling and data processing"],
+    technologies: ["machine-learning", "python", "classification", "deep learning"],
+    date: new Date("2023-04-02T00:00:00.000-06:00"),
+    link: "https://drive.google.com/drive/folders/1iYBxX9yezhcOeWA67vLJdxSL5UCfSEwi?usp=sharing",
+  },
+
+  {
+    categorie: "ml",
+    name: "cars Clustering",
+    details: "an ML business clustering system to segment car models, looking for potential competitors for a new line of cars",
+    important: [""],
+    technologies: ["machine-learning", "python", "clustering"],
+    date: new Date("2023-03-03T00:00:00.000-06:00"),
+    link: "https://colab.research.google.com/drive/1zFWN8Dj5pNZUN7qUXqp9Y2VRSpJXnYoo?usp=sharing",
+  },
+  {
+    categorie: "ml",
+    name: "customers Segmentation",
+    details: "an ML business clustering system to segment customers regarding their demographics and economics, looking for those to target for product advertising",
+    important: [""],
+    technologies: ["machine-learning", "python", "clustering"],
+    date: new Date("2023-03-02T00:00:00.000-06:00"),
+    link: "https://colab.research.google.com/drive/1TdwuccJMifSHe3VwA-M8mdAxRidL5sM7?usp=sharing",
+  },
 
   {
     categorie: "ml",
     name: "breast cancer prediction",
-    details: "an ML binomial classification system to classify breast cancer scans as benign or malignant. The prediction relies on the Stochastic Gradient Descent (SGD) classifier algorithm",
+    details: "an ML binomial classification system to classify breast cancer scans as benign or malignant. The prediction relies on the Stochastic Gradient Descent (SGD) classifier algorithm. This project also uses cross-validation in the model evaluation to improve the performance improvement through hyperparameter tunning",
     important: [""],
     technologies: ["machine-learning", "python", "classification"],
-    date: new Date("2023-01-02T00:00:00.000-06:00"),
+    date: new Date("2023-02-06T00:00:00.000-06:00"),
     link: "https://colab.research.google.com/drive/10MAfnGkozwddQBYe_ixtEhHqaczXZMqd?usp=sharing",
   },
   {
@@ -350,7 +394,7 @@ export const projectsMl = [
     details: "an ML binomial classification system to classify cells to determine whether the samples are benign or malignant using human cell records. The prediction relies on the Support Vector Machine algorithm",
     important: [""],
     technologies: ["machine-learning", "python", "classification"],
-    date: new Date("2023-01-02T00:00:00.000-06:00"),
+    date: new Date("2023-02-05T00:00:00.000-06:00"),
     link: "https://colab.research.google.com/drive/16BQ84izYCJs7e1cFrigo9nFgpXKLCPaP?usp=sharing",
   },
   {
@@ -359,7 +403,7 @@ export const projectsMl = [
     details: "an ML multinomial classification system to predict which customers will or will not churn the company. The prediction relies on Logistic Regressio algorithm",
     important: [""],
     technologies: ["machine-learning", "python", "classification"],
-    date: new Date("2023-01-02T00:00:00.000-06:00"),
+    date: new Date("2023-02-04T00:00:00.000-06:00"),
     link: "https://colab.research.google.com/drive/1knWsYQcHKjghJreosNqyy538G2XlmlFW?usp=sharing",
   },
   {
@@ -368,7 +412,7 @@ export const projectsMl = [
     details: "an ML multinomial classification system to predict patients drug consumption. The prediction relies on Decission Tree algorithm",
     important: [""],
     technologies: ["machine-learning", "python", "classification"],
-    date: new Date("2023-01-02T00:00:00.000-06:00"),
+    date: new Date("2023-02-03T00:00:00.000-06:00"),
     link: "https://colab.research.google.com/drive/14WUoKn8Du9aEeri5rugbT8qDHr0Stg2O?usp=sharing",
   },
   {
@@ -377,7 +421,7 @@ export const projectsMl = [
     details: "an ML multinomial classification system to predict/label fruits using physical features. The prediction relies on KNN algorithm",
     important: [""],
     technologies: ["machine-learning", "python", "classification"],
-    date: new Date("2023-01-02T00:00:00.000-06:00"),
+    date: new Date("2023-02-02T00:00:00.000-06:00"),
     link: "https://colab.research.google.com/drive/10CZvdzpnfYkZ90xN8gyaS5eo0eSj289Z?usp=sharing",
   },
 
@@ -387,7 +431,7 @@ export const projectsMl = [
     details: "an ML regression system to predict housing price on Colombia",
     important: [""],
     technologies: ["machine-learning", "python", "regression"],
-    date: new Date("2023-01-02T00:00:00.000-06:00"),
+    date: new Date("2023-01-03T00:00:00.000-06:00"),
     link: "https://colab.research.google.com/drive/1Px3r__OT3jgOLO2un9MO1s2kTgni8wOe?usp=sharing",
   },
   {
