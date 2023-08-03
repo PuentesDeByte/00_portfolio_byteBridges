@@ -4,11 +4,13 @@ import './App.css'
 import { Layout } from '../containers/Layout'
 import Home from '../pages/Home'
 import ProjectsPage from '../pages/ProjectsPage'
+import ScrollToTop from '../components/ScrollToTop'
 
 function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
