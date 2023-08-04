@@ -21,7 +21,7 @@ const ProjectSelector = ({ projectsCategories, setProjectsCategories, isProjects
   }
 
   return (
-    <div className="projects-selector h-fit mt-12">
+    <div className="projects-selector h-fit mt-12 cursor-pointer">
       <ul className={`gl-txt-main-font h-fit flex flex-row ${isProjectsPage ? '' : 'md:flex-col'} `}>
         {
           projectsCategories.map((categorieObj, id) => (

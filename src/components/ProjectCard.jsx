@@ -22,7 +22,7 @@ const ProjectCard = ({ project }) => {
     <div className="project-cards rounded-lg h-fit p-4 flex gap-4 
       flex-col sm:flex-row
       hover:bg-slate-400/5 hover:border-t-[1px] hover:border-r-[1px] border-slate-300/20
-      transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.01]"
+      transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.01] cursor-pointer"
       onMouseEnter={handleOnLinkClick}
       onMouseLeave={handleOnLinkClick}
       onClick={() => window.open(`${project.link}`)}
