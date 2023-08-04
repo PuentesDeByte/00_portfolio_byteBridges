@@ -120,7 +120,7 @@ a:hover {
 // donde sea que cree las css variables, los hijos las podrán usar. pongo ademas valores por defecto
 	background-image: radial-gradient(
     circle farthest-corner at var(--x, 50vw) var(--y, 50vh),
-    #1250aa -25%,
+    #1250aa -65%,
     transparent 20%
   );
 }

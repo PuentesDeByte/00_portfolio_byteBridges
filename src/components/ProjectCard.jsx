@@ -49,7 +49,7 @@ const ProjectCard = ({ project }) => {
 
         <p className="card-detils text-base text-slate-500 leading-5 mb-2">{project.details[0].toUpperCase() + project.details.substring(1)}</p>
 
-        {project.important.length > 1 && (
+        {(project.important[0] !== '') && (
           <div className="card-important text-base text-slate-500 leading-5 h-fit">
             <p className="mb-1 gl-tex text-slate-400"> ⚠️ Important: ⚠️ </p>
             <ul className="list-disc pl-4 mb-2">
