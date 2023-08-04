@@ -11,7 +11,7 @@ const ProjectsTable = ({ projectsData }) => {
 
   return (
     <table className="w-full mt-2">
-      <thead className="sticky top-0 z-10 bg-slate-900/75 backdrop-blur">
+      <thead className="sticky top-0 z-10 backdrop-blur">
         <tr className="border-b-[1px] border-slate-300/10">
           {
             Object.entries(projectsColsLarge).map((projectsCol, id) => (

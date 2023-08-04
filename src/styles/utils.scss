@@ -115,3 +115,12 @@ a:hover {
 .nav-logoN:hover {
   transform: translate(-5px, -5px);
 }
+
+.layout{
+// donde sea que cree las css variables, los hijos las podrán usar. pongo ademas valores por defecto
+	background-image: radial-gradient(
+    circle farthest-side at var(--x, 100px) var(--y, 100px),
+    #1250aa -25%,
+    transparent 20%
+  );
+}
