@@ -29,7 +29,6 @@ function Layout() {
     const updateMouseScroll = (ev) => {
       if (!mouseRef.current) return;
       totalScrollY = window.scrollY + clientScrollY; //al bajar tambien actualizo
-      console.log(totalScrollY);
 
       mouseRef.current.style.setProperty("--y", `${totalScrollY}px`)
     };
@@ -43,27 +42,6 @@ function Layout() {
     }; //clean up function para quitar el listener por si el efecto rerun
   }, []);
 
-  // addEventListener("scroll", (event) => {});
-
-  // useEffect(() => {
-  //   const updateMouseScroll = (ev) => {
-  //     if (!mouseRef.current) return;
-  //     console.log(ev);
-  //     let totalScrollY = window.scrollY + clientScrollY;
-  //     console.log(totalScrollY);
-
-  //     // const { clientX, clientY } = ev;
-  //     // // console.log(mouseRef.current.style); // con set property, las setea como inline styles
-  //     // mouseRef.current.style.setProperty("--x", `${clientX}px`);
-  //     // mouseRef.current.style.setProperty("--y", `${clientY}px`);
-  //   };
-
-
-
-  //   return () => {
-  //     window.removeEventListener("scroll", updateMouseScroll);
-  //   }; //clean up function para quitar el listener por si el efecto rerun
-  // }, []);
 
 
   return (
