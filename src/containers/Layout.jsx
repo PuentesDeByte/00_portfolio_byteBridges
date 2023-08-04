@@ -8,40 +8,62 @@ function Layout() {
   const mouseRef = useRef(null); //ref a estilos del layout
 
   useEffect(() => {
+
+    let clientScrollX = 0 //por si llegase a tener scroll horizontal
+    let clientScrollY = 0;
+    let totalScrollY = 0;
+
+
     const updateMousePosition = (ev) => {
       if (!mouseRef.current) return; //si aun no hay ref en en DOM, manda nada
       // console.log(ev);
       const { clientX, clientY } = ev;
       // console.log(mouseRef.current.style); // con set property, las setea como inline styles
+      clientScrollY = clientY
+      clientScrollX = clientX
       mouseRef.current.style.setProperty("--x", `${clientX}px`);
-      mouseRef.current.style.setProperty("--y", `${clientY}px`);
+      mouseRef.current.style.setProperty("--y", `${clientY + window.scrollY}px`); //le agrego el valor que se ha scroleado
+    };
+
+
+    const updateMouseScroll = (ev) => {
+      if (!mouseRef.current) return;
+      totalScrollY = window.scrollY + clientScrollY; //al bajar tambien actualizo
+      console.log(totalScrollY);
+
+      mouseRef.current.style.setProperty("--y", `${totalScrollY}px`)
     };
 
     window.addEventListener("mousemove", updateMousePosition); //agrego listener de mouse movey se lo paso  l funcion
 
+    window.addEventListener("scroll", updateMouseScroll);
     return () => {
       window.removeEventListener("mousemove", updateMousePosition);
+      window.removeEventListener("scroll", updateMouseScroll);
     }; //clean up function para quitar el listener por si el efecto rerun
   }, []);
 
   // addEventListener("scroll", (event) => {});
 
-  useEffect(() => {
-    const updateMouseScroll = (ev) => {
-      if (!mouseRef.current) return;
-      console.log(ev);
-      // const { clientX, clientY } = ev;
-      // // console.log(mouseRef.current.style); // con set property, las setea como inline styles
-      // mouseRef.current.style.setProperty("--x", `${clientX}px`);
-      // mouseRef.current.style.setProperty("--y", `${clientY}px`);
-    };
+  // useEffect(() => {
+  //   const updateMouseScroll = (ev) => {
+  //     if (!mouseRef.current) return;
+  //     console.log(ev);
+  //     let totalScrollY = window.scrollY + clientScrollY;
+  //     console.log(totalScrollY);
 
-    window.addEventListener("scroll", updateMouseScroll); //agrego listener de mouse movey se lo paso  l funcion
+  //     // const { clientX, clientY } = ev;
+  //     // // console.log(mouseRef.current.style); // con set property, las setea como inline styles
+  //     // mouseRef.current.style.setProperty("--x", `${clientX}px`);
+  //     // mouseRef.current.style.setProperty("--y", `${clientY}px`);
+  //   };
 
-    return () => {
-      window.removeEventListener("scroll", updateMouseScroll);
-    }; //clean up function para quitar el listener por si el efecto rerun
-  }, []);
+
+
+  //   return () => {
+  //     window.removeEventListener("scroll", updateMouseScroll);
+  //   }; //clean up function para quitar el listener por si el efecto rerun
+  // }, []);
 
 
   return (
