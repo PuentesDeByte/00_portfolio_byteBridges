@@ -6,7 +6,7 @@ const Media = () => {
   return (
     <ul className="media-list w-full h-full flex justify-between m-0">
       <li className="w-auto h-full pr-5">
-        <a href="https://www.linkedin.com/in/nicole-venachi-pizo/" target="_blank" rel="noreferrer">
+        <a href="https://www.linkedin.com/in/nicole-venachi/" target="_blank" rel="noreferrer">
           <IconLinkedin />
         </a>
       </li>
