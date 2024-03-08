@@ -16,7 +16,7 @@ export const technologies = [
   },
   {
     name: 'sQL',
-    level: 'basics',
+    // level: 'basics',
     priority:3, //denerian ser 1
   },
   {
@@ -26,7 +26,7 @@ export const technologies = [
   },
   {
     name: 'firebase',
-    level: 'basics',
+    // level: 'basics',
     priority:3, //denerian ser 1
   },
   {
@@ -108,6 +108,18 @@ export const projectsWeb = [
 
   {
     categorie: "web",
+    name: "lawyer's Portfolio, Corporate Portfolio",
+    details: "This website serves as a corporate-style landing page showcasing the legal services of an attorney. It provides concise information about their professional experience, education, and skills. The services section outlines their areas of expertise, while emphasizing reasons to hire their services. The platform also includes contact details for easy communication. With a clear and professional approach, the site offers visitors a comprehensive and accessible insight into the attorney and their legal services",
+    important: [""],
+    technologies: ["hTML", "cSS" , "javaScript"],
+    date: new Date("2024-01-02T00:00:00.000-06:00"),
+    link: "https://sebastianlegarda.com/",
+    starred: true,
+    image: 'images/projects/05_web.png',
+    importance: 1,
+  },
+  {
+    categorie: "web",
     name: "cryptoVerse App",
     details: "this app displays the most important cryptos currencies information live. U can watch their stats and news live",
     important: [""],
@@ -115,7 +127,8 @@ export const projectsWeb = [
     date: new Date("2023-06-02T00:00:00.000-06:00"),
     link: "https://crypto-verse-app-nl.netlify.app/",
     starred: true,
-    image: 'images/projects/01_web.png'
+    image: 'images/projects/01_web.png',
+    importance: 3,
   },
   {
     categorie: "web",
@@ -126,7 +139,8 @@ export const projectsWeb = [
     date: new Date("2023-05-02T00:00:00.000-06:00"),
     link: "https://travel-advitsor-app.netlify.app/",
     starred: true,
-    image: 'images/projects/02_web.png'
+    image: 'images/projects/02_web.png',
+    importance: 5,
   },
 
   {
@@ -138,7 +152,8 @@ export const projectsWeb = [
     date: new Date("2023-04-02T00:00:00.000-06:00"),
     link: "https://fisica-taller.vercel.app/",
     starred: true,
-    image: 'images/projects/03_web.png'
+    image: 'images/projects/03_web.png',
+    importance: 4,
   },
   
   {
@@ -211,7 +226,8 @@ export const projectsWeb = [
     date: new Date("2022-05-03T00:00:00.000-06:00"),
     link: "https://nicolevenachi.github.io/Instrumentaci-n-Fend/index.html",
     starred: true,
-    image: 'images/projects/04_web.png'
+    image: 'images/projects/04_web.png',
+    importance: 2,
   },
 
   {

@@ -38,7 +38,11 @@ const Projects = () => {
 
     //un estado/efecto adicional, para optimizar rendeering.
     //fatal ria optinizar que no re rendice, si
-    setStarredProjectsWeb(projects.filter(project => project?.starred == true))
+    setStarredProjectsWeb(
+      projects
+        .filter(project => project?.starred == true)
+        .sort((a, b) => a?.importance - b?.importance)
+    )
 
   }, [projects])
 
