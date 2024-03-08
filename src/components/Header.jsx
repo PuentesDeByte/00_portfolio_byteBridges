@@ -50,9 +50,9 @@ const Header = () => {
   return (
     <header className='gl-font-sans w-[inherit] h-16 sm:h-20 z-20 top-0 sticky backdrop-blur'>
       <nav className="header-container flex justify-between items-center w-full h-full">
-        <div className="header-logo h-12 sm:h-16 w-auto relative">
-          <IconLogoN />
-          <img src={logoBG} className='h-12 sm:h-16 w-auto absolute top-0 -z-10' alt="logo" />
+        <div className="header-logo h-12 sm:h-16 w-auto relative ">
+          <img src="logoMinified.png" alt="logo" className="nav-logo" />
+          <img src={logoBG} className='h-12 sm:h-16 w-auto absolute top-0 -z-10 absolute left-[18%]' alt="logo" />
         </div>
 
         <div className="header-info z-20">

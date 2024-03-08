@@ -113,10 +113,15 @@ a:hover {
     width: 60px;
   }
 }
-.nav-logoN{
+.nav-logo{
   transition-duration: 500ms;
+  width: 140%;
+  height: 140%;
+
+  position: relative;
+  top: -20%;
 }
-.nav-logoN:hover {
+.nav-logo:hover {
   transform: translate(-5px, -5px);
 }
 
