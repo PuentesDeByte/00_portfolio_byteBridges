@@ -22,7 +22,7 @@ const Footer = () => {
 
       <div className='footer-description w-full max-w-xs flex flex-col items-center'>
         <h1 className='text-base text-center leading-4 text-slate-500'>
-          Built with <a className='text-slate-400' href='https://tailwindcss.com/' target="_blank" rel="noreferrer"> Tailwind CSS</a > and deployed with  <a className='text-slate-400' target="_blank" rel="noreferrer" href="https://vercel.com">Vercel </a>
+          Built with <a className='text-slate-400' href='https://tailwindcss.com/' target="_blank" rel="noreferrer"> Tailwind CSS</a > and deployed with  <a className='text-slate-400' target="_blank" rel="noreferrer" href="https://github.com">Github</a>
         </h1>
         <h2 className='text-sm text-center leading-4 text-slate-600 m-0'>
           Insprired by <a className='text-slate-400' onMouseEnter={handleOnLinkClick} onMouseLeave={handleOnLinkClick} href="https://brittanychiang.com/" target="_blank" rel="noreferrer">
