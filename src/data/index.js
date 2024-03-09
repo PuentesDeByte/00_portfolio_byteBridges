@@ -189,16 +189,6 @@ export const projectsWeb = [
 
   {
     categorie: "web",
-    name: "simple UI test",
-    details: "a dummy web app to test some UI ideas I had and the redux essentials",
-    important: ["designed for large screens only"],
-    technologies: ["hTML", "cSS" , "javaScript", "redux", "react"],
-    date: new Date("2022-02-02T00:00:00.000-06:00"),
-    link: "https://master--dashing-parfait-e884c0.netlify.app/"
-  },
-
-  {
-    categorie: "web",
     name: "1st gen pokemons App",
     details: "a pokemon web app showing 1st gen Pokemons basic info. Builded to test my Redux Toolkit knowledge",
     important: ["designed for large screens only"],
@@ -272,16 +262,6 @@ export const projectsWeb = [
 
   {
     categorie: "web",
-    name: "react To-Do list",
-    details: "a simple to-do list project builded using react",
-    important: [""],
-    technologies: ["hTML", "cSS", "javaScript", "react"],
-    date: new Date("2021-02-02T00:00:00.000-06:00"),
-    link: "https://nicolevenachi.github.io/01_introduccion-a-react/"
-  },
-
-  {
-    categorie: "web",
     name: "grid layout demo",
     details: "a dummy static web app to test my grid layout knowledge",
     important: [""],
@@ -298,36 +278,6 @@ export const projectsWeb = [
     technologies: ["hTML", "cSS" , "javaScript"],
     date: new Date("2020-02-02T00:00:00.000-06:00"),
     link: "https://nicolevenachi.github.io/AESS_Development/"
-  },
-
-  {
-    categorie: "web",
-    name: "simple UI test",
-    details: "a dummy static web app to test some UI ideas i had",
-    important: ["designed for large screens only"],
-    technologies: ["hTML", "cSS" , "sass"],
-    date: new Date("2020-03-02T00:00:00.000-06:00"),
-    link: "https://nicolevenachi.github.io/Platzi_Frontend_Developer/maquetacion.html"
-  },
-
-  {
-    categorie: "web",
-    name: "simple UI test",
-    details: "a dummy static web app to test some UI ideas i had",
-    important: [""],
-    technologies: ["hTML", "cSS" , "sass"],
-    date: new Date("2020-04-02T00:00:00.000-06:00"),
-    link: "https://nicolevenachi.github.io/Curso_Practico_JS//03_ForkedProject/index.html"
-  },
-
-  {
-    categorie: "web",
-    name: "personal website V1",
-    details: "a pretty old portfolio builded to test my CSS basic knowledge back then",
-    important: [""],
-    technologies: ["hTML", "cSS"],
-    date: new Date("2019-11-02T00:00:00.000-06:00"),
-    link: "https://nicolevenachi.github.io/Desarrollo_Web_Online/"
   },
 
   {
