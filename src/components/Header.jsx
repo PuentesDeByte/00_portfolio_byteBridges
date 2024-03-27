@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 
 const Header = () => {
 
-  const categories = ['about', 'skills', 'projects']
+  const categories = ['about', 'skills', 'services', 'projects']
 
   const [isCheckoutSideMenuOpen, setIsCheckoutSideMenuOpen] = useState(false)
 

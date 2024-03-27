@@ -62,7 +62,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="projects w-full h-fit mb-24">
-      <SectionsTitle number={'3'} text={'Projects'} />
+      <SectionsTitle number={'4'} text={'Projects'} />
 
       <div className="projects-content flex justify-between w-full flex-col md:flex-row">
 
