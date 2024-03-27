@@ -1,6 +1,10 @@
 // import as from '../assets/projects/web/01_web.png'
 export const technologies = [
   {
+    name: 'wordpress',
+    priority:1,
+  },
+  {
     name: 'react',
     priority:1,
   },
